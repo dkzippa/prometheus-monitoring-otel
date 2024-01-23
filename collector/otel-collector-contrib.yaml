@@ -9,13 +9,8 @@ exporters:
   logging:
   loki:
     endpoint: http://loki:3100/loki/api/v1/push
-  # prometheus:
-  #   endpoint: "0.0.0.0:8889"
-
-extensions:
-  health_check:
-  pprof:
-  zpages:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
 
 service:
   pipelines:
@@ -27,5 +22,4 @@ service:
       exporters: [logging]
     metrics:
       receivers: [otlp]
-      # exporters: [logging, prometheus]
-      exporters: [logging]
+      exporters: [logging,prometheus]

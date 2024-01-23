@@ -1,10 +1,8 @@
-# config file version
+
 apiVersion: 1
 
-
 datasources:
-  # <string, required> name of the datasource. Required
-- name: Prometheus  
+- name: Prometheus
   type: prometheus
   uid: prometheus
   orgId: 1
@@ -15,7 +13,7 @@ datasources:
   editable: true
   jsonData:
     httpMethod: GET
-    
+
 - name: Loki
   type: loki
   access: proxy 
@@ -25,3 +23,4 @@ datasources:
   isDefault: false
   version: 1
   editable: true
+  
