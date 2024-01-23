@@ -1,7 +1,7 @@
 receivers:
   otlp:
     protocols:
-      grpc:
+      grpc: #0.0.0.0:4317
       http:
         endpoint: "0.0.0.0:3030"
 
